@@ -147,6 +147,6 @@ public class Test_1 {
             res = temp.replaceAll("[' ', ₽]", "");
         }
 
-        //driver.quit();
+        driver.quit();
     }
 }
