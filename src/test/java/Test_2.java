@@ -37,6 +37,11 @@ public class Test_2 {
         WebElement el = (new WebDriverWait(driver, 10))
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href=\"/my/settings\"]")));
 
+        //"//*[@alt="user-avatar"]/../.."
+        // Ожидание выпадения меню
+        //"//*[@data-zone-name="profileMenu"]/*" - expected conditions
+        //"//*[text()="Настройки"]"
+
         city = driver.findElement(By.xpath("//a[@href=\"/my/settings\"]"));
         city.click();
 
