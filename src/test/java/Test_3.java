@@ -49,8 +49,9 @@ public class Test_3 {
             tovar.click();
         }
 
-        WebElement dynamicElement = (new WebDriverWait(driver, 10)) // Ожидание сообщения что продукт добавлен в корзину
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@data-auto=\"executed-cart-button\"]")));
+        Thread.sleep(2000);
+        //WebElement dynamicElement = (new WebDriverWait(driver, 10)) // Ожидание сообщения что продукт добавлен в корзину
+        //        .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@data-auto=\"executed-cart-button\"]")));
 
         try{
             driver.findElement(By.xpath("//a[@href=\"/my/cart\"]")).click();

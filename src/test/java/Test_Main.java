@@ -10,13 +10,16 @@ import java.util.concurrent.TimeUnit;
 //Password
 
 public class Test_Main {
+
+    ChromeDriver driver;
+
     @org.junit.Test
     public int main() throws InterruptedException{
         String home = "/Users/www/Downloads/chromedriver.exe";
         String univer = "/Users/dolgovdv/Desktop/chromedriver.exe";
 
         System.setProperty("webdriver.chrome.driver", home);
-        ChromeDriver driver = new ChromeDriver();
+        //driver = new ChromeDriver();
         driver.get("https://pokupki.market.yandex.ru/");
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
