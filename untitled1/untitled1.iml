@@ -1,0 +1,16 @@
+private static void introsort_loop (int lo , int hi , int depth_limit )
+{
+	while (hi -lo > size_threshold )
+	{
+		if ( depth_limit == 0)
+		{
+			heapsort (lo , hi );
+			return ;
+		}
+		depth_limit --;
+		int p= partition (lo , hi ,
+			medianof3 (lo , lo +((hi -lo )/2)+1 , hi -1));
+		introsort_loop (p, hi , depth_limit );
+		hi=p;
+	}
+}
